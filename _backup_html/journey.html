@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heartfelt - Our Journey Together</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#360c19",
+                    "surface-dim": "#edd4d4",
+                    "on-secondary-fixed": "#1b1c17",
+                    "outline": "#837375",
+                    "on-primary-container": "#7b4551",
+                    "surface-container": "#ffe9e8",
+                    "on-tertiary-container": "#a42026",
+                    "tertiary-fixed": "#ffdad7",
+                    "tertiary": "#b12a2e",
+                    "primary-container": "#ffb7c5",
+                    "on-surface": "#251818",
+                    "outline-variant": "#d6c2c4",
+                    "inverse-surface": "#3c2d2d",
+                    "on-secondary-fixed-variant": "#474742",
+                    "on-tertiary-fixed": "#410005",
+                    "surface-container-high": "#fbe2e2",
+                    "primary": "#864e5a",
+                    "primary-fixed-dim": "#fbb3c1",
+                    "on-tertiary-fixed-variant": "#8f0d19",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#ffd9df",
+                    "surface-container-low": "#fff0f0",
+                    "secondary-fixed-dim": "#c8c7bf",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#65655f",
+                    "on-background": "#251818",
+                    "surface": "#fff8f7",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#ffb9b4",
+                    "on-error-container": "#93000a",
+                    "secondary-container": "#e4e3db",
+                    "on-primary-fixed-variant": "#6b3743",
+                    "inverse-on-surface": "#ffedec",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#5f5f59",
+                    "on-surface-variant": "#514345",
+                    "tertiary-fixed-dim": "#ffb3ae",
+                    "surface-bright": "#fff8f7",
+                    "surface-container-highest": "#f5dddc",
+                    "inverse-primary": "#fbb3c1",
+                    "surface-variant": "#f5dddc",
+                    "background": "#fff8f7",
+                    "secondary-fixed": "#e4e3db",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#864e5a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "element-gap": "16px",
+                    "base": "8px",
+                    "container-padding": "24px",
+                    "section-margin": "64px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Playfair Display"],
+                    "display-handwritten": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-handwritten": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .handwritten-path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw 3s ease-out forwards;
+        }
+        @keyframes draw {
+            to { stroke-dashoffset: 0; }
+        }
+        .timeline-card {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .timeline-card:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+        .squishy-btn {
+            transition: all 0.2s ease;
+        }
+        .squishy-btn:active {
+            transform: scale(0.92);
+        }
+        .floating-sparkle {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .paper-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background paper-texture font-body-md overflow-x-hidden">
+<!-- TopAppBar Shell -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm shadow-primary/10">
+<nav class="flex justify-between items-center px-container-padding py-4 max-w-[800px] mx-auto">
+<div class="font-display-handwritten text-display-handwritten text-primary dark:text-primary-fixed-dim">Heartfelt</div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="reasons.html">Reasons</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="promises.html">Promises</a>
+<a class="text-primary font-bold border-b-2 border-primary" href="journey.html">Timeline</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="letter.html">Letter</a>
+</div>
+<div class="flex gap-2">
+<button class="material-symbols-outlined text-primary hover:bg-primary-container/20 p-2 rounded-full transition-colors active:scale-95">favorite</button>
+</div>
+</nav>
+</header>
+<main class="pt-24 pb-section-margin px-container-padding max-w-[800px] mx-auto relative">
+<!-- Background doodles -->
+<div class="absolute top-40 left-0 text-primary-container opacity-40 floating-sparkle" style="animation-delay: 0s;">
+<span class="material-symbols-outlined text-5xl">auto_awesome</span>
+</div>
+<div class="absolute top-96 right-0 text-primary-container opacity-40 floating-sparkle" style="animation-delay: 1s;">
+<span class="material-symbols-outlined text-4xl">favorite</span>
+</div>
+<div class="absolute bottom-40 left-10 text-primary-container opacity-40 floating-sparkle" style="animation-delay: 2s;">
+<span class="material-symbols-outlined text-5xl">potted_plant</span>
+</div>
+<section class="text-center mb-16">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-2">Our Journey Together</h1>
+<p class="text-on-surface-variant italic">Every step, every laugh, and every lesson led us here.</p>
+</section>
+<!-- The Timeline Path SVG -->
+<div class="absolute top-[280px] left-1/2 -translate-x-1/2 w-full h-[1800px] pointer-events-none -z-10 hidden md:block">
+<svg fill="none" height="100%" viewbox="0 0 400 1800" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path class="handwritten-path" d="M200 0C200 100 350 150 350 300C350 450 100 500 100 650C100 800 300 850 300 1000C300 1150 50 1200 50 1350C50 1500 200 1600 200 1800" stroke="#ffb7c5" stroke-dasharray="12 12" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+</div>
+<!-- Timeline Items -->
+<div class="space-y-32 md:space-y-0 md:relative">
+<!-- Milestone 1 -->
+<div class="flex flex-col md:flex-row items-center md:justify-end md:mb-40">
+<div class="md:w-1/2 md:pr-12 md:text-right">
+<div class="timeline-card bg-surface-container-low border border-outline-variant/20 rounded-xl p-8 shadow-sm shadow-primary/10 relative">
+<div class="absolute -top-4 -right-4 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined">coffee</span>
+</div>
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-md font-label-md mb-4 border border-dashed border-outline">June 12, 2022</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-3">The First Sip</h3>
+<p class="text-on-surface-variant">Remember that tiny café on the corner? We talked for four hours until they had to politely ask us to leave. I knew then you were special.</p>
+</div>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="flex flex-col md:flex-row items-center md:justify-start md:mb-40">
+<div class="md:w-1/2 md:pl-12">
+<div class="timeline-card bg-surface-container-low border border-outline-variant/20 rounded-xl p-8 shadow-sm shadow-primary/10 relative">
+<div class="absolute -top-4 -left-4 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined">park</span>
+</div>
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-md font-label-md mb-4 border border-dashed border-outline">Aug 05, 2022</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-3">Our First Walk</h3>
+<p class="text-on-surface-variant">Getting lost in the botanical gardens wasn't a mistake; it was our first adventure. The way you noticed every small flower made me smile.</p>
+</div>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="flex flex-col md:flex-row items-center md:justify-end md:mb-40">
+<div class="md:w-1/2 md:pr-12 md:text-right">
+<div class="timeline-card bg-surface-container-low border border-outline-variant/20 rounded-xl p-8 shadow-sm shadow-primary/10 relative">
+<div class="absolute -top-4 -right-4 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined">movie</span>
+</div>
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-md font-label-md mb-4 border border-dashed border-outline">Oct 31, 2022</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-3">Spooky Movie Night</h3>
+<p class="text-on-surface-variant">We pretended to be brave, but we both hid under the blanket for most of the film. It's still my favorite Halloween memory.</p>
+</div>
+</div>
+</div>
+<!-- Milestone 4 (Image Focus) -->
+<div class="flex flex-col md:flex-row items-center md:justify-start md:mb-40">
+<div class="md:w-1/2 md:pl-12">
+<div class="timeline-card bg-surface-container-low border border-outline-variant/20 rounded-xl overflow-hidden shadow-sm shadow-primary/10 relative">
+<img alt="Soft moments" class="w-full h-48 object-cover" data-alt="A warm, cozy aesthetic photograph of two hands gently intertwined on a soft, cream-colored knitted blanket. The scene is bathed in the golden, diffused light of a setting sun, creating long, soft shadows. The color palette is dominated by gentle pinks, warm beiges, and soft creams, evoking a mood of deep intimacy, safety, and heartfelt connection. A single dried wildflower lies beside the hands, adding a touch of whimsical, rustic charm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoI0NQHM7XDPgjNiiNFOrTzKE0HaDYOYiDulrqsm_DfkqNRNawzVUo02TVnz2ZcZWFi7VqK2veyjxtMo24pnLM9CdelEpYWAbHmSfWkNkM3S6WHnbwNKVNCnbrOE6qLh5UwXuviavTpMI8x0bfG3ZapCJSkvkysuKIDKnAOf3ySpNote7O-mZoU_ZEO6u1wF2lH6TECl4jeB_nAZzDgcR3sW7Xx5mO98Z-tESgIXgpNa-xFnvAfkKNx_ied4LL8zleG8B0m8Xi3z0"/>
+<div class="p-8">
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-md font-label-md mb-4 border border-dashed border-outline">Jan 01, 2023</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-3">New Year, New Us</h3>
+<p class="text-on-surface-variant">We watched the fireworks from the roof and promised to always choose each other. That promise remains the anchor of my heart.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Milestone 5 -->
+<div class="flex flex-col md:flex-row items-center md:justify-end md:mb-40">
+<div class="md:w-1/2 md:pr-12 md:text-right">
+<div class="timeline-card bg-surface-container-low border border-outline-variant/20 rounded-xl p-8 shadow-sm shadow-primary/10 relative">
+<div class="absolute -top-4 -right-4 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined">heart_broken</span>
+</div>
+<span class="inline-block px-3 py-1 bg-tertiary-container text-on-tertiary-container rounded-full text-label-md font-label-md mb-4 border border-dashed border-tertiary">Recently</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-3">A Bump in the Road</h3>
+<p class="text-on-surface-variant">Relationships aren't always perfect. We had our first real disagreement, but it showed me how much I never want to lose what we've built.</p>
+</div>
+</div>
+</div>
+<!-- The Seal (Sign-off) -->
+<div class="flex justify-center mt-32">
+<div class="relative group cursor-pointer">
+<div class="w-32 h-32 rounded-full bg-primary flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-500 overflow-hidden">
+<!-- Scalloped Edge Effect -->
+<div class="absolute inset-0 border-4 border-dashed border-white/30 rounded-full"></div>
+<div class="text-center text-white px-2">
+<span class="material-symbols-outlined text-4xl block" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<p class="font-display-handwritten text-sm">Always</p>
+</div>
+</div>
+<!-- Wax seal drips style doodles -->
+<div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-48 text-center opacity-0 group-hover:opacity-100 transition-opacity">
+<p class="font-display-handwritten text-primary text-xl">I'm so sorry, truly.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-lowest dark:bg-surface-dim w-full py-section-margin border-t border-outline-variant/10">
+<div class="flex flex-col items-center justify-center gap-element-gap text-center px-container-padding max-w-[800px] mx-auto">
+<div class="font-display-handwritten text-display-handwritten text-tertiary">Heartfelt</div>
+<p class="text-secondary dark:text-secondary-fixed-dim font-label-md text-label-md">With love and sincerity, always.</p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="javascript:void(0)">Privacy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="javascript:void(0)">Terms of Heart</a>
+</div>
+<div class="mt-8 flex gap-4">
+<button class="squishy-btn px-8 py-3 bg-primary text-white rounded-full font-bold shadow-md shadow-primary/20 hover:shadow-lg">
+                    Send a Message
+                </button>
+</div>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for the timeline cards
+        document.querySelectorAll('.timeline-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Potential for adding small floating heart emojis or sparkle particles via JS
+                const heart = document.createElement('div');
+                heart.innerHTML = '🌸';
+                heart.style.position = 'absolute';
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.top = '100%';
+                heart.style.transition = 'all 1s ease-out';
+                heart.style.opacity = '1';
+                card.appendChild(heart);
+                
+                setTimeout(() => {
+                    heart.style.transform = 'translateY(-50px)';
+                    heart.style.opacity = '0';
+                }, 50);
+                
+                setTimeout(() => heart.remove(), 1000);
+            });
+        });
+    </script>
+</body></html>

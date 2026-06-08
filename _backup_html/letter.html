@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heartfelt - A Sincere Letter</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;family=Dancing+Script:wght@500&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#360c19",
+                    "surface-dim": "#edd4d4",
+                    "on-secondary-fixed": "#1b1c17",
+                    "outline": "#837375",
+                    "on-primary-container": "#7b4551",
+                    "surface-container": "#ffe9e8",
+                    "on-tertiary-container": "#a42026",
+                    "tertiary-fixed": "#ffdad7",
+                    "tertiary": "#b12a2e",
+                    "primary-container": "#ffb7c5",
+                    "on-surface": "#251818",
+                    "outline-variant": "#d6c2c4",
+                    "inverse-surface": "#3c2d2d",
+                    "on-secondary-fixed-variant": "#474742",
+                    "on-tertiary-fixed": "#410005",
+                    "surface-container-high": "#fbe2e2",
+                    "primary": "#864e5a",
+                    "primary-fixed-dim": "#fbb3c1",
+                    "on-tertiary-fixed-variant": "#8f0d19",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#ffd9df",
+                    "surface-container-low": "#fff0f0",
+                    "secondary-fixed-dim": "#c8c7bf",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#65655f",
+                    "on-background": "#251818",
+                    "surface": "#fff8f7",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#ffb9b4",
+                    "on-error-container": "#93000a",
+                    "secondary-container": "#e4e3db",
+                    "on-primary-fixed-variant": "#6b3743",
+                    "inverse-on-surface": "#ffedec",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#5f5f59",
+                    "on-surface-variant": "#514345",
+                    "tertiary-fixed-dim": "#ffb3ae",
+                    "surface-bright": "#fff8f7",
+                    "surface-container-highest": "#f5dddc",
+                    "inverse-primary": "#fbb3c1",
+                    "surface-variant": "#f5dddc",
+                    "background": "#fff8f7",
+                    "secondary-fixed": "#e4e3db",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#864e5a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "element-gap": "16px",
+                    "base": "8px",
+                    "container-padding": "24px",
+                    "section-margin": "64px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Playfair Display"],
+                    "display-handwritten": ["Dancing Script"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "serif-body": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-handwritten": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .scalloped-seal {
+            mask-image: radial-gradient(circle at 10px 10px, transparent 10px, black 11px);
+            mask-size: 20px 20px;
+        }
+        .letter-paper {
+            background-image: 
+                linear-gradient(90deg, rgba(134, 78, 90, 0.05) 1px, transparent 1px),
+                linear-gradient(rgba(134, 78, 90, 0.05) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .scribble-underline {
+            background: linear-gradient(to right, transparent 0%, #ffb7c5 50%, transparent 100%);
+            height: 3px;
+            border-radius: 50%;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/20 shadow-sm shadow-primary/10">
+<div class="flex justify-between items-center px-container-padding py-4 max-w-[800px] mx-auto">
+<span class="font-display-handwritten text-[28px] text-primary">Heartfelt</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="reasons.html">Reasons</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="promises.html">Promises</a>
+<a class="text-primary font-bold border-b-2 border-primary font-label-md text-label-md" href="letter.html">Letter</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container hover:bg-primary-container/20 transition-all active:scale-95" id="musicToggle">
+<span class="material-symbols-outlined text-[20px]" id="musicIcon">music_note</span>
+<span class="font-label-md text-label-md">Atmosphere</span>
+</button>
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform">favorite</span>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-24 px-container-padding max-w-[800px] mx-auto relative overflow-hidden">
+<!-- Whimsical Accents -->
+<div class="absolute top-20 right-4 md:-right-10 opacity-20 pointer-events-none">
+<img class="w-48 h-48 object-contain" data-alt="A delicate, hand-drawn floral watercolor illustration featuring soft pink peonies and sage green leaves. The aesthetic is whimsical and romantic, designed with a high-key, bright light-mode background that feels airy and sincere. Subtle sparkles and line-art heart doodles surround the central floral motif, evoking a sense of gentle charm and emotional warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOusJIkdhEOIdgsVrDsJeUJt5ufXZ1Dg8Z0pL93I2n5XG6fOLUr7rg7WHyA_5gLHDCVBIYsH4J7y2-cxqhI8TN2Z-6l-vdQzrpN1hNFqECpz6uNSnKP5HneZKPumF5HCP1QW4_fOi2RMlCXDauDT7N7sNsuJlJWxX3CUO5c3Cqm4Xueq46OSsXoynKaDeaAzlDkNYGV3YjYXtV3SjUiVfiAlMlMVpjJLolmPHt2ReFJvPvBVGFwe2e-y750O4UEEjWJwhMFvv7HS0"/>
+</div>
+<!-- The Letter Container -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl shadow-lg shadow-primary/5 p-8 md:p-16 relative letter-paper min-h-[1000px]">
+<!-- Letter Header -->
+<header class="mb-12 text-center">
+<div class="flex justify-center mb-6">
+<span class="px-4 py-1 rounded-full border border-dashed border-primary/40 bg-primary-container/10 text-primary font-label-md text-label-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        Sincere Heart
+                    </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-2">My Sincerest Apology</h1>
+<div class="scribble-underline mx-auto w-32"></div>
+<p class="mt-8 font-label-md text-label-md text-on-surface-variant italic">Written with love and reflection • October 24th, 2023</p>
+</header>
+<!-- Letter Body -->
+<section class="space-y-8 font-serif-body text-[20px] leading-relaxed text-on-surface-variant">
+<p>
+                    Dearest you,
+                </p>
+<p>
+                    I have spent the last few hours trying to find the right words, sitting here with a cup of tea that has long gone cold. Words often feel too small to bridge the gaps we sometimes create between each other, yet they are all I have right now to reach out to you.
+                </p>
+<div class="relative py-4">
+<img class="w-full h-64 object-cover rounded-xl shadow-inner opacity-90" data-alt="A serene, soft-focus photograph of a weathered wooden desk with a vintage fountain pen resting on a piece of high-quality cream-colored parchment. Beside the letter sits a small, dried pink rose petal. The lighting is warm and golden, as if coming from a nearby window during a quiet afternoon sunset, creating a sentimental and reflective mood consistent with a heartfelt apology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4tM3pqVxGBxtE6gXtZ5BWNXTsXSfrYcGokUvGn570pqI1C2-8ktEFcriSwSSzGFmcSwXJxmQT5Z7HIbKWgJw9IxuSdLAAV4WeM4_0qGRLoe0K3qyfW7CpbMia7EQMOwGj3VN-1rXEyAn-5x713J1f-psIPh57Lp0_efK_P87dMrFBKkYeO-TPPlxf0Sp2QtxfpkYe0-vkVsS3KEs13IdMnnlp4XhPaxZpOQ1EVWREWHErkt2xRWvCYPklttm9D1IhHHbQ0U26XxE"/>
+</div>
+<p>
+                    I want to start by saying I am truly sorry. I am sorry for the silence that followed our conversation, for the words I left unsaid, and for the moments where I failed to see things through your eyes. It was never my intention to cause you pain, but I realize now that intent doesn't always mitigate the impact of one's actions.
+                </p>
+<p>
+                    You deserve someone who listens with their whole heart, who honors your vulnerability, and who stays present even when things get difficult. In that moment, I wasn't that person. I let my own fears and insecurities cloud my judgment, and for that, I am deeply regretful.
+                </p>
+<div class="bg-surface-container-low p-8 rounded-xl border border-primary/10 italic">
+                    "Love is not just a feeling, but a consistent choice to understand, even when understanding seems impossible."
+                </div>
+<p>
+                    I miss our laughter—the kind that makes our eyes water. I miss the way the world felt a little softer when we were on the same page. More than anything, I miss the trust that we built so carefully, stone by stone, and I am willing to do whatever it takes to help rebuild it, at whatever pace you need.
+                </p>
+<p>
+                    There is so much more I want to say, but I will start with this: I value you more than I can express. You are a light in my life, and I am committed to being better, not just for us, but because you deserve nothing less.
+                </p>
+</section>
+<!-- Signature and Seal -->
+<footer class="mt-20 flex flex-col items-end gap-6">
+<div class="text-right">
+<p class="font-label-md text-label-md mb-2 text-on-surface-variant">With all my love and sincerity,</p>
+<p class="font-display-handwritten text-[48px] text-primary leading-none">Always yours.</p>
+</div>
+<!-- The Stamp (Specialty Component) -->
+<div class="relative group cursor-pointer active:scale-95 transition-transform duration-300">
+<div class="w-24 h-24 bg-tertiary rounded-full flex items-center justify-center shadow-md relative z-10 animate-float">
+<span class="material-symbols-outlined text-white text-[40px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<!-- Decorative scalloped edge simulated with absolute elements -->
+<div class="absolute inset-0 border-4 border-dashed border-white/20 rounded-full"></div>
+</div>
+<div class="absolute inset-0 bg-tertiary/20 blur-xl rounded-full scale-125 -z-10 group-hover:bg-primary/30 transition-colors"></div>
+</div>
+</footer>
+<!-- Whimsical Doodles -->
+<div class="absolute bottom-10 left-10 opacity-30 select-none">
+<span class="material-symbols-outlined text-primary text-[32px] rotate-12">auto_awesome</span>
+</div>
+</article>
+<!-- Post-Letter Actions -->
+<div class="mt-16 flex flex-col md:flex-row justify-center gap-6">
+<button class="px-12 py-5 bg-primary text-white rounded-full font-label-md text-label-md shadow-lg shadow-primary/20 hover:shadow-primary/40 active:scale-95 transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">send</span>
+                Send a Response
+            </button>
+<button class="px-12 py-5 bg-surface-container-highest text-primary rounded-full font-label-md text-label-md border border-primary/20 hover:bg-primary-container/20 active:scale-95 transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">content_copy</span>
+                Save as Draft
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-margin bg-surface-container-lowest dark:bg-surface-dim border-t border-outline-variant/10">
+<div class="flex flex-col items-center justify-center gap-element-gap text-center px-container-padding">
+<span class="font-display-handwritten text-display-handwritten text-tertiary">Heartfelt</span>
+<p class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim">With love and sincerity, always.</p>
+<div class="flex gap-8 mt-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="javascript:void(0)">Privacy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="javascript:void(0)">Terms of Heart</a>
+</div>
+</div>
+</footer>
+<!-- Atmosphere Background Audio Simulation -->
+<audio id="bgMusic" loop="">
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"/>
+</audio>
+<script>
+        // Micro-interactions and Atmosphere Toggle
+        const musicBtn = document.getElementById('musicToggle');
+        const musicIcon = document.getElementById('musicIcon');
+        const bgMusic = document.getElementById('bgMusic');
+        let isPlaying = false;
+
+        musicBtn.addEventListener('click', () => {
+            if (!isPlaying) {
+                // In a real browser context, this might need a user gesture first
+                // bgMusic.play().catch(() => console.log('Audio requires interaction'));
+                musicIcon.textContent = 'pause';
+                musicBtn.classList.add('bg-primary-container');
+                musicBtn.classList.remove('bg-secondary-container');
+                isPlaying = true;
+            } else {
+                // bgMusic.pause();
+                musicIcon.textContent = 'music_note';
+                musicBtn.classList.remove('bg-primary-container');
+                musicBtn.classList.add('bg-secondary-container');
+                isPlaying = false;
+            }
+        });
+
+        // Add subtle parallax effect to doodle elements
+        window.addEventListener('mousemove', (e) => {
+            const amount = 20;
+            const x = (e.clientX / window.innerWidth - 0.5) * amount;
+            const y = (e.clientY / window.innerHeight - 0.5) * amount;
+            
+            document.querySelectorAll('.animate-float').forEach(el => {
+                el.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+    </script>
+</body></html>

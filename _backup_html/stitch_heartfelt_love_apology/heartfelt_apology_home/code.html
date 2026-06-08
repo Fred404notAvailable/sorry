@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heartfelt | I'm So Sorry</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#864e5a",
+                    "on-background": "#251818",
+                    "surface-container-highest": "#f5dddc",
+                    "surface-dim": "#edd4d4",
+                    "on-primary-fixed": "#360c19",
+                    "inverse-surface": "#3c2d2d",
+                    "outline": "#837375",
+                    "surface-container": "#ffe9e8",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-tertiary-fixed": "#410005",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#ffedec",
+                    "surface-bright": "#fff8f7",
+                    "surface-container-high": "#fbe2e2",
+                    "secondary-container": "#e4e3db",
+                    "on-surface": "#251818",
+                    "inverse-primary": "#fbb3c1",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#1b1c17",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#f5dddc",
+                    "tertiary-fixed-dim": "#ffb3ae",
+                    "secondary-fixed-dim": "#c8c7bf",
+                    "tertiary": "#b12a2e",
+                    "secondary-fixed": "#e4e3db",
+                    "on-secondary-fixed-variant": "#474742",
+                    "surface": "#fff8f7",
+                    "surface-tint": "#864e5a",
+                    "error": "#ba1a1a",
+                    "secondary": "#5f5f59",
+                    "on-surface-variant": "#514345",
+                    "tertiary-container": "#ffb9b4",
+                    "on-tertiary-fixed-variant": "#8f0d19",
+                    "primary-container": "#ffb7c5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#fbb3c1",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#ffd9df",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#65655f",
+                    "on-tertiary-container": "#a42026",
+                    "on-primary-fixed-variant": "#6b3743",
+                    "on-primary-container": "#7b4551",
+                    "outline-variant": "#d6c2c4",
+                    "surface-container-low": "#fff0f0",
+                    "background": "#fff8f7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "element-gap": "16px",
+                    "container-padding": "24px",
+                    "base": "8px",
+                    "section-margin": "64px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Playfair Display"],
+                    "display-handwritten": ["Playfair Display"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-handwritten": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #FFF0F0;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .floating-heart {
+            position: absolute;
+            pointer-events: none;
+            z-index: 10;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.6;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.6; }
+            100% { transform: translateY(-100px) rotate(20deg); opacity: 0; }
+        }
+        .hand-drawn-border {
+            border-style: dashed;
+            border-width: 1px;
+        }
+        .scalloped-seal {
+            background: radial-gradient(circle at 50% 50%, #ffb7c5 60%, transparent 65%);
+            mask-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 C55 10 65 10 70 0 C75 10 85 10 90 0 C100 5 100 15 90 20 C100 25 100 35 90 40 C100 45 100 55 90 60 C100 65 100 75 90 80 C100 85 100 95 90 100 C85 90 75 90 70 100 C65 90 55 90 50 100 C45 90 35 90 30 100 C25 90 15 90 10 100 C0 95 0 85 10 80 C0 75 0 65 10 60 C0 55 0 45 10 40 C0 35 0 25 10 20 C0 15 0 5 10 0 C15 10 25 10 30 0 C35 10 45 10 50 0' fill='black'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- Floating Hearts Background Layer -->
+<div class="fixed inset-0 pointer-events-none" id="heart-container"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full bg-surface/80 backdrop-blur-md shadow-sm shadow-primary/10 z-50">
+<div class="flex justify-between items-center px-container-padding py-base max-w-[800px] mx-auto w-full">
+<span class="font-display-handwritten text-display-handwritten text-primary">Heartfelt</span>
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform">favorite</button>
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform">menu</button>
+</div>
+</div>
+</header>
+<main class="max-w-[800px] mx-auto px-container-padding pt-32 pb-section-margin relative">
+<!-- Hero Section -->
+<section class="flex flex-col items-center text-center gap-base mb-section-margin">
+<div class="relative w-full max-w-md aspect-square mb-element-gap group">
+<img alt="Heart Illustration" class="w-full h-full object-contain rounded-xl shadow-sm transition-transform duration-500 group-hover:scale-105" data-alt="A delicate, hand-drawn charcoal heart illustration on a soft cream paper background, surrounded by tiny light pink watercolor splatters. The lighting is warm and diffused, creating a cozy and intimate atmosphere. The overall style is whimsical and artistic, aligning with a heartfelt apology theme with high-key pastel tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChZR4gSK0x_husy2mJf3l-ubn_V0oOTddQEjg3iCAj3--oj3zM_cOEpGYdjJ5HD54AEhRls8WifjG17kMrVNkxyWeZBPXziXLrw7zSSkjuiJWTH0ooVTQvydptxTIXej0wxqeJnrki8EVVpDVktfFr8jT3Sutp2WdRM9x8y0OiHB-4tNOpXYzFVK83_NOf0RKebP6M_ZReWqNOdmJaCfqT5-Kv17fnjPSO3V7lUG5mniIg5pAq7_LjLt8wfYfcKibny4GKU3NbrEw"/>
+<div class="absolute -top-4 -right-4 w-12 h-12 flex items-center justify-center bg-primary-container rounded-full shadow-md animate-bounce">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary md:font-headline-xl md:text-headline-xl text-headline-xl-mobile font-headline-xl-mobile">
+                I'm So Sorry, Princess
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto mt-4 leading-relaxed">
+                I know words can't always fix the hurt, but I wanted to build this little corner of the world just for you. You are the most important person in my life, and I'll do whatever it takes to make things right.
+            </p>
+<div class="flex flex-wrap justify-center gap-element-gap mt-base">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md shadow-sm hover:opacity-90 active:scale-95 transition-all shadow-primary/20">
+                    See Why I Love You
+                </button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-primary-container transition-all active:scale-95">
+                    Read My Promises
+                </button>
+</div>
+</section>
+<!-- Bento Apology Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-element-gap mb-section-margin">
+<!-- Large Card -->
+<div class="bg-surface-container p-container-padding rounded-xl flex flex-col justify-between min-h-[300px] shadow-sm relative group overflow-hidden">
+<span class="material-symbols-outlined absolute top-4 right-4 text-primary/40 group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<div>
+<div class="inline-flex items-center gap-2 border border-primary/20 rounded-full px-3 py-1 mb-4">
+<span class="material-symbols-outlined text-[16px] text-primary">auto_stories</span>
+<span class="font-label-md text-[12px] text-primary uppercase tracking-widest">Our Story</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-2">The Moments That Matter</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Every laugh we shared and every dream we built together is worth more than any mistake I've made. I'm holding onto us.</p>
+</div>
+<div class="mt-4 flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-primary-container flex items-center justify-center text-primary">🌸</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-primary-container flex items-center justify-center text-primary">✨</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-primary-container flex items-center justify-center text-primary">🧸</div>
+</div>
+</div>
+<div class="grid grid-rows-2 gap-element-gap">
+<!-- Promise Card -->
+<div class="bg-white p-6 rounded-xl hand-drawn-border border-outline-variant/40 flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="bg-surface-container-highest p-3 rounded-full">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary">A Sincere Promise</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">To listen more, react less, and always cherish you.</p>
+</div>
+</div>
+<!-- Mood Tag Card -->
+<div class="bg-primary-fixed p-6 rounded-xl flex flex-wrap gap-2 content-center items-center shadow-sm">
+<span class="hand-drawn-border border-primary/30 px-4 py-2 rounded-full font-label-md text-[12px] text-primary flex items-center gap-1 bg-surface-bright">
+                        🥺 Sincere
+                    </span>
+<span class="hand-drawn-border border-primary/30 px-4 py-2 rounded-full font-label-md text-[12px] text-primary flex items-center gap-1 bg-surface-bright">
+                        🌸 Sweet
+                    </span>
+<span class="hand-drawn-border border-primary/30 px-4 py-2 rounded-full font-label-md text-[12px] text-primary flex items-center gap-1 bg-surface-bright">
+                        💖 Devoted
+                    </span>
+<span class="hand-drawn-border border-primary/30 px-4 py-2 rounded-full font-label-md text-[12px] text-primary flex items-center gap-1 bg-surface-bright">
+                        🎀 Princess
+                    </span>
+</div>
+</div>
+</section>
+<!-- The Stamp (Wax Seal) Section -->
+<section class="flex flex-col items-center gap-element-gap py-section-margin">
+<div class="w-32 h-32 scalloped-seal flex items-center justify-center shadow-xl transform rotate-12 hover:rotate-0 transition-transform cursor-pointer group">
+<div class="text-center">
+<span class="material-symbols-outlined text-white text-4xl block group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-display-handwritten text-white text-sm">Love</span>
+</div>
+</div>
+<p class="font-display-handwritten text-display-handwritten text-primary text-center mt-4">
+                "Forever &amp; Always, Yours."
+            </p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col items-center justify-center gap-base w-full pb-32 py-section-margin bg-transparent">
+<span class="font-display-handwritten text-display-handwritten text-primary">Heartfelt</span>
+<p class="font-label-md text-label-md text-on-surface-variant opacity-60">Made with all my love and a million apologies</p>
+<div class="flex gap-element-gap mt-2">
+<a class="font-label-md text-label-md text-on-surface-variant opacity-60 hover:text-primary transition-colors" href="#">Our Story</a>
+<a class="font-label-md text-label-md text-on-surface-variant opacity-60 hover:text-primary transition-colors" href="#">Contact Me</a>
+</div>
+</footer>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 max-w-[800px] mx-auto left-1/2 -translate-x-1/2 bg-surface-container dark:bg-on-background border-t border-outline-variant/20 rounded-t-xl shadow-[0_-4px_12px_rgba(134,78,90,0.1)]">
+<div class="flex flex-col items-center justify-center bg-primary-container dark:bg-on-primary-fixed-variant text-on-primary-container dark:text-primary-fixed rounded-full px-4 py-1 scale-110 active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-secondary-fixed-variant px-4 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors transition-all duration-300">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label-md text-label-md">Reasons</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-secondary-fixed-variant px-4 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors transition-all duration-300">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-md text-label-md">Promises</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-secondary-fixed-variant px-4 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors transition-all duration-300">
+<span class="material-symbols-outlined">calendar_meal</span>
+<span class="font-label-md text-label-md">Date</span>
+</div>
+</nav>
+<script>
+        // Micro-interaction: Particle Heart Effect
+        const container = document.getElementById('heart-container');
+        const heartIcons = ['favorite', 'favorite_border', 'potted_plant', 'local_florist', 'sparkles'];
+
+        function createHeart() {
+            const heart = document.createElement('span');
+            heart.classList.add('material-symbols-outlined', 'floating-heart', 'text-primary');
+            heart.innerText = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+            
+            const startX = Math.random() * window.innerWidth;
+            const size = Math.random() * (24 - 12) + 12;
+            const duration = Math.random() * (8 - 4) + 4;
+            
+            heart.style.left = `${startX}px`;
+            heart.style.top = `110%`;
+            heart.style.fontSize = `${size}px`;
+            heart.style.animationDuration = `${duration}s`;
+            
+            if (Math.random() > 0.5) {
+                heart.style.fontVariationSettings = "'FILL' 1";
+            }
+
+            container.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, duration * 1000);
+        }
+
+        // Spawn hearts periodically
+        setInterval(createHeart, 800);
+
+        // Initial burst
+        for(let i=0; i<5; i++) createHeart();
+    </script>
+</body></html>

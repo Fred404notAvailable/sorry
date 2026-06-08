@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heartfelt - Reasons Why I Love You</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#864e5a",
+                        "on-background": "#251818",
+                        "surface-container-highest": "#f5dddc",
+                        "surface-dim": "#edd4d4",
+                        "on-primary-fixed": "#360c19",
+                        "inverse-surface": "#3c2d2d",
+                        "outline": "#837375",
+                        "surface-container": "#ffe9e8",
+                        "tertiary-fixed": "#ffdad7",
+                        "on-tertiary-fixed": "#410005",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#ffedec",
+                        "surface-bright": "#fff8f7",
+                        "surface-container-high": "#fbe2e2",
+                        "secondary-container": "#e4e3db",
+                        "on-surface": "#251818",
+                        "inverse-primary": "#fbb3c1",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#1b1c17",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#f5dddc",
+                        "tertiary-fixed-dim": "#ffb3ae",
+                        "secondary-fixed-dim": "#c8c7bf",
+                        "tertiary": "#b12a2e",
+                        "secondary-fixed": "#e4e3db",
+                        "on-secondary-fixed-variant": "#474742",
+                        "surface": "#fff8f7",
+                        "surface-tint": "#864e5a",
+                        "error": "#ba1a1a",
+                        "secondary": "#5f5f59",
+                        "on-surface-variant": "#514345",
+                        "tertiary-container": "#ffb9b4",
+                        "on-tertiary-fixed-variant": "#8f0d19",
+                        "primary-container": "#ffb7c5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#fbb3c1",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#ffd9df",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#65655f",
+                        "on-tertiary-container": "#a42026",
+                        "on-primary-fixed-variant": "#6b3743",
+                        "on-primary-container": "#7b4551",
+                        "outline-variant": "#d6c2c4",
+                        "surface-container-low": "#fff0f0",
+                        "background": "#fff8f7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "element-gap": "16px",
+                        "container-padding": "24px",
+                        "base": "8px",
+                        "section-margin": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Playfair Display"],
+                        "display-handwritten": ["Playfair Display"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-handwritten": ["24px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .polaroid-card {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .polaroid-card:hover {
+            transform: scale(1.05) rotate(0deg) !important;
+            z-index: 10;
+        }
+        .paper-texture {
+            background-color: #fff8f7;
+            background-image: radial-gradient(#d6c2c4 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .scalloped-seal {
+            clip-path: polygon(100% 50%, 98.08% 59.75%, 92.4% 67.63%, 83.55% 73.07%, 72.4% 75.61%, 60.1% 75%, 47.9% 75.61%, 36.45% 73.07%, 27.6% 67.63%, 21.92% 59.75%, 20% 50%, 21.92% 40.25%, 27.6% 32.37%, 36.45% 26.93%, 47.9% 24.39%, 60.1% 25%, 72.4% 24.39%, 83.55% 26.93%, 92.4% 32.37%, 98.08% 40.25%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden paper-texture">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full bg-surface/80 backdrop-blur-md shadow-sm shadow-primary/10 px-container-padding py-base max-w-[800px] mx-auto left-0 right-0 z-50 flex justify-between items-center">
+<span class="font-display-handwritten text-display-handwritten text-primary">Heartfelt</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-80 transition-opacity" data-icon="favorite">favorite</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-80 transition-opacity" data-icon="menu">menu</span>
+</div>
+</header>
+<main class="pt-24 pb-32 max-w-[800px] mx-auto px-container-padding">
+<!-- Hero Intro -->
+<section class="text-center mb-section-margin">
+<h1 class="font-headline-xl text-headline-xl mb-base text-primary">Every Little Thing</h1>
+<p class="text-on-surface-variant max-w-md mx-auto italic">A digital memory board of all the reasons why you're the most special person in my world.</p>
+</section>
+<!-- Gallery of Reasons -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+<!-- Card 1 -->
+<div class="polaroid-card bg-surface-container-lowest p-4 pb-12 shadow-[0_8px_30px_rgb(134,78,90,0.12)] -rotate-3 border border-outline-variant/10">
+<div class="relative w-full aspect-square mb-6 bg-surface-dim overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover grayscale-[20%] sepia-[10%]" data-alt="A whimsical, soft-focus close up of a small, hand-crafted paper heart resting on a textured cream surface. The lighting is warm and golden, reminiscent of a sunset through a window. The overall aesthetic is minimalist and romantic, featuring a palette of soft pinks, dusty roses, and deep cocoa accents that align with a sincere, heartfelt brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqzsC-eX8fy-6hdAERhz_sPt5621cnydUKGdCSaZGY_Kf3-o_k-PnrrYIyccMp4RsnwAn4h2Ya9376kxRR_K8nppj4e8mXishBVzvRfB5c3AZP0akF74Sv7AWk0QgUd9hsxqLg_7UGRCQyY97xndLriioxoMSrSj9pkcWwqXQ5puX0KHmlqlIURpStBHaXL6SrZ527XpF_ABCC0zfck6eu5wDYS6AR7SbzxOsV8wO0MzsLyDopEPBY925scQoIYh0Gu97Gu2ttiq4"/>
+<div class="absolute top-2 right-2 text-primary">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<p class="font-display-handwritten text-display-handwritten text-center text-on-surface">The way you smile</p>
+</div>
+<!-- Card 2 -->
+<div class="polaroid-card bg-surface-container-lowest p-4 pb-12 shadow-[0_8px_30px_rgb(134,78,90,0.12)] rotate-2 border border-outline-variant/10">
+<div class="relative w-full aspect-square mb-6 bg-surface-dim overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover" data-alt="A delicate, minimalist illustration of two hands reaching out towards each other, with a small red string of fate connecting their pinky fingers. The background is a clean, textured off-white. The art style is refined line-art with a soft, warm glow and subtle shadows, maintaining the brand's vulnerable and soft-spoken personality through the use of primary pink and cocoa dust tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJbyMv46cGlH13Dr5RnVupki8SQkF-BJ5DIMHukQG4Q9erqqRwP3L3bQifamUaAS1NTpT839_5WzDLZZ6S3UiBe2hI8Dc1EOtjFLAso07QS4KARFRP1zup3Qy-5luaxYxZc5NQ1uak6MhybMogTPE0tksa_wWCuw5p5ILS3asumWZhnA5eXuRbkcCVi3Q2GOv5LFcY8cl1ekNDsYlLOmcJZJ7djd8Ooxpcu157AkAzmzOuaHnoaxA8uebaWUXb-8bfpaRbOJmDS5E"/>
+<div class="absolute top-2 right-2 text-primary">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<p class="font-display-handwritten text-display-handwritten text-center text-on-surface">Your kindness</p>
+</div>
+<!-- Card 3 -->
+<div class="polaroid-card bg-surface-container-lowest p-4 pb-12 shadow-[0_8px_30px_rgb(134,78,90,0.12)] -rotate-1 border border-outline-variant/10 md:mt-12">
+<div class="relative w-full aspect-square mb-6 bg-surface-dim overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover" data-alt="An atmospheric, high-key photograph of a cozy corner featuring a ceramic mug with a tiny heart-shaped foam pattern, resting on a soft knit blanket. The colors are muted creams and warm browns, creating a feeling of safety and comfort. The lighting is diffused and gentle, perfectly capturing the whimsical and tactile nature of a heartfelt digital apology note." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO3BNgFez0kerR_m77_u4CpjBtqRuDtU0-yGaAxKubQPFpzETOs5E2CJNnx3b3G2rl7u6ZcU98EdDLYJVkTA1Eiyn8m8bqDb-E-rPibZPdWB5Bcr09jHYxK1OmbMEPbuXCMeA_SK0_hz0qm4j4L1SQbcYCTkZYXuDSLzlzvW4-1iY6afyd5bmazOhisHnfsGXJsWOwB-HpFeBrb70zlhX3_TAVzV7d5Tnjq5DwEn3C2rkBonP-agMuB23_dQKd72Q1NABX5gnpQeQ"/>
+<div class="absolute top-2 right-2 text-primary">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<p class="font-display-handwritten text-display-handwritten text-center text-on-surface">How you listen</p>
+</div>
+<!-- Card 4 -->
+<div class="polaroid-card bg-surface-container-lowest p-4 pb-12 shadow-[0_8px_30px_rgb(134,78,90,0.12)] rotate-3 border border-outline-variant/10">
+<div class="relative w-full aspect-square mb-6 bg-surface-dim overflow-hidden rounded-sm">
+<img class="w-full h-full object-cover" data-alt="A serene landscape captured in a polaroid style, showing a field of wild daisies under a soft, lavender-tinted sky during twilight. The image feels like a precious memory, with a tactile quality and soft grain. The palette is dominated by gentle pastels and earthy browns, reinforcing a sense of calm and sincerity in the user's journey to mend a relationship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtnER_vRh_KiwJEl9WjaACTVRytAZW2lCb82rD0qvlCA834rUzvpokqGP-wLGAeRbnfgOKTq4SNAubbpOVJKf8Yla50FNFuNYf8L0iXY18VG7KDLAACU2JFfTcolfiRT0GmTfgfa270WsJRF968LXMtXSMZgsE9yTGXQfKMvWEJeEuDOPJUdi0p5pJYXKNqufcgdlopQ9XXMqP9LbKb9aVEir9DRoslxBM6oH0oLEu3ea2mk3HJQiwSiBpFfHzS5DktVdLQ3wl00I"/>
+<div class="absolute top-2 right-2 text-primary">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<p class="font-display-handwritten text-display-handwritten text-center text-on-surface">Our quiet moments</p>
+</div>
+</div>
+<!-- Specialty Component: The Stamp -->
+<div class="flex flex-col items-center mt-section-margin mb-section-margin">
+<div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center text-on-primary shadow-lg transform hover:scale-110 transition-transform cursor-pointer overflow-hidden relative group">
+<div class="absolute inset-0 border-4 border-dashed border-white/20 rounded-full animate-[spin_10s_linear_infinite]"></div>
+<span class="material-symbols-outlined text-4xl" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<p class="mt-base font-display-handwritten text-primary text-xl">I'm Sorry</p>
+<div class="mt-2 flex gap-2">
+<span class="px-3 py-1 bg-surface-container-highest border border-dashed border-outline text-label-md font-label-md text-primary rounded-full">🥺 Sincere</span>
+<span class="px-3 py-1 bg-surface-container-highest border border-dashed border-outline text-label-md font-label-md text-primary rounded-full">🌸 Sweet</span>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col items-center justify-center gap-base w-full pb-32 pt-section-margin bg-transparent">
+<span class="font-display-handwritten text-display-handwritten text-primary">Heartfelt</span>
+<div class="flex gap-4">
+<a class="text-on-surface-variant opacity-60 hover:text-primary transition-colors font-label-md text-label-md" href="journey.html">Our Story</a>
+<a class="text-on-surface-variant opacity-60 hover:text-primary transition-colors font-label-md text-label-md" href="letter.html">Contact Me</a>
+</div>
+<p class="text-on-surface-variant opacity-60 font-label-md text-label-md">Made with all my love and a million apologies</p>
+</footer>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 max-w-[800px] mx-auto left-1/2 -translate-x-1/2 bg-surface-container dark:bg-on-background border-t border-outline-variant/20 rounded-t-xl shadow-[0_-4px_12px_rgba(134,78,90,0.1)]">
+<a href="index.html" class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors px-4 py-1 transition-all duration-300">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a href="reasons.html" class="flex flex-col items-center justify-center bg-primary-container dark:bg-on-primary-fixed-variant text-on-primary-container dark:text-primary-fixed rounded-full scale-110 active:scale-95 px-4 py-1 transition-all duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-md text-label-md">Reasons</span>
+</a>
+<a href="promises.html" class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors px-4 py-1 transition-all duration-300">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-md text-label-md">Promises</span>
+</a>
+<a href="forgive.html" class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors px-4 py-1 transition-all duration-300">
+<span class="material-symbols-outlined">calendar_heart</span>
+<span class="font-label-md text-label-md">Date</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for cards on scroll
+        const cards = document.querySelectorAll('.polaroid-card');
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = entry.target.style.transform.replace('translateY(20px)', 'translateY(0)');
+                }
+            });
+        }, observerOptions);
+
+        cards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            card.style.transform = card.style.transform + ' translateY(20px)';
+            observer.observe(card);
+        });
+    </script>
+</body></html>

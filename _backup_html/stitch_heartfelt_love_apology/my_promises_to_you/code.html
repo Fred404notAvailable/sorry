@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heartfelt - My Promises to You</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Dancing+Script:wght@400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#864e5a",
+                        "on-background": "#251818",
+                        "surface-container-highest": "#f5dddc",
+                        "surface-dim": "#edd4d4",
+                        "on-primary-fixed": "#360c19",
+                        "inverse-surface": "#3c2d2d",
+                        "outline": "#837375",
+                        "surface-container": "#ffe9e8",
+                        "tertiary-fixed": "#ffdad7",
+                        "on-tertiary-fixed": "#410005",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#ffedec",
+                        "surface-bright": "#fff8f7",
+                        "surface-container-high": "#fbe2e2",
+                        "secondary-container": "#e4e3db",
+                        "on-surface": "#251818",
+                        "inverse-primary": "#fbb3c1",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#1b1c17",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#f5dddc",
+                        "tertiary-fixed-dim": "#ffb3ae",
+                        "secondary-fixed-dim": "#c8c7bf",
+                        "tertiary": "#b12a2e",
+                        "secondary-fixed": "#e4e3db",
+                        "on-secondary-fixed-variant": "#474742",
+                        "surface": "#fff8f7",
+                        "surface-tint": "#864e5a",
+                        "error": "#ba1a1a",
+                        "secondary": "#5f5f59",
+                        "on-surface-variant": "#514345",
+                        "tertiary-container": "#ffb9b4",
+                        "on-tertiary-fixed-variant": "#8f0d19",
+                        "primary-container": "#ffb7c5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#fbb3c1",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#ffd9df",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#65655f",
+                        "on-tertiary-container": "#a42026",
+                        "on-primary-fixed-variant": "#6b3743",
+                        "on-primary-container": "#7b4551",
+                        "outline-variant": "#d6c2c4",
+                        "surface-container-low": "#fff0f0",
+                        "background": "#fff8f7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "element-gap": "16px",
+                        "container-padding": "24px",
+                        "base": "8px",
+                        "section-margin": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Playfair Display"],
+                        "display-handwritten": ["Playfair Display"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "script": ["Dancing Script"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-handwritten": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .lined-paper {
+            background-color: #fffcf0;
+            background-image: linear-gradient(#e1d9c1 1px, transparent 1px);
+            background-size: 100% 2.5rem;
+            line-height: 2.5rem;
+            position: relative;
+        }
+        .lined-paper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 40px;
+            width: 2px;
+            height: 100%;
+            background-color: rgba(255, 183, 197, 0.4);
+        }
+        .signature-pad {
+            cursor: crosshair;
+            touch-action: none;
+        }
+        .scribble-hover:hover {
+            transform: rotate(-1deg) scale(1.02);
+            transition: all 0.3s ease;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .stamp-effect {
+            box-shadow: inset 0 0 10px rgba(134, 78, 90, 0.1), 0 4px 6px rgba(134, 78, 90, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm shadow-primary/10 flex justify-between items-center px-container-padding py-base max-w-[800px] mx-auto left-1/2 -translate-x-1/2">
+<span class="font-display-handwritten text-display-handwritten text-primary">Heartfelt</span>
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity scale-95 active:scale-90" data-icon="favorite">favorite</button>
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity scale-95 active:scale-90" data-icon="menu">menu</button>
+</div>
+</nav>
+<main class="pt-24 pb-32 px-container-padding max-w-[800px] mx-auto overflow-x-hidden">
+<!-- Hero Section / Context -->
+<section class="mb-section-margin text-center">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-4">My Heart on Paper</h1>
+<p class="text-on-surface-variant max-w-lg mx-auto">Sometimes words are easier when they're written down. These are the things I want to hold myself to, just for you.</p>
+</section>
+<!-- The Letter Component -->
+<div class="relative bg-white rounded-xl shadow-[0_10px_30px_rgba(134,78,90,0.15)] overflow-hidden transform rotate-1 mb-section-margin">
+<!-- Decorative Tape -->
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-10 bg-primary/10 backdrop-blur-sm transform rotate-2 z-10"></div>
+<div class="lined-paper p-10 pt-16 min-h-[600px]">
+<div class="pl-12">
+<p class="font-script text-3xl text-primary mb-8 opacity-80">Dear You,</p>
+<ul class="space-y-0">
+<li class="flex items-center gap-4 scribble-hover">
+<span class="material-symbols-outlined text-primary/40 text-xl" data-icon="sparkles">spark</span>
+<span class="font-script text-2xl text-on-surface">I promise to listen more than I speak.</span>
+</li>
+<li class="flex items-center gap-4 scribble-hover">
+<span class="material-symbols-outlined text-primary/40 text-xl" data-icon="restaurant">restaurant</span>
+<span class="font-script text-2xl text-on-surface">I promise to always bring you snacks.</span>
+</li>
+<li class="flex items-center gap-4 scribble-hover">
+<span class="material-symbols-outlined text-primary/40 text-xl" data-icon="nightlight">nightlight</span>
+<span class="font-script text-2xl text-on-surface">I promise to never let the sun go down on our anger.</span>
+</li>
+<li class="flex items-center gap-4 scribble-hover">
+<span class="material-symbols-outlined text-primary/40 text-xl" data-icon="local_florist">local_florist</span>
+<span class="font-script text-2xl text-on-surface">I promise to appreciate the small things you do.</span>
+</li>
+<li class="flex items-center gap-4 scribble-hover">
+<span class="material-symbols-outlined text-primary/40 text-xl" data-icon="auto_stories">auto_stories</span>
+<span class="font-script text-2xl text-on-surface">I promise to write more chapters of our story.</span>
+</li>
+<li class="flex items-center gap-4 scribble-hover">
+<span class="material-symbols-outlined text-primary/40 text-xl" data-icon="favorite">favorite</span>
+<span class="font-script text-2xl text-on-surface">I promise to choose you, every single day.</span>
+</li>
+</ul>
+<div class="mt-16 text-right pr-4">
+<p class="font-script text-2xl text-primary mb-2 opacity-80">With all my love,</p>
+<!-- Digital Signature Area -->
+<div class="inline-block relative">
+<canvas class="signature-pad border-b-2 border-dashed border-primary/30 w-64 h-32" height="128" id="signature-pad" width="256"></canvas>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20 select-none">
+<span class="font-script text-lg">Sign here...</span>
+</div>
+<button class="absolute -right-8 bottom-2 material-symbols-outlined text-on-surface-variant/40 hover:text-primary transition-colors text-sm" data-icon="refresh" id="clear-signature">refresh</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Wax Seal Decoration -->
+<div class="absolute bottom-8 left-8 w-20 h-20 rounded-full bg-primary flex items-center justify-center stamp-effect transform -rotate-12 border-4 border-primary-container">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<!-- Bento Grid Insights -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-section-margin">
+<div class="md:col-span-2 bg-surface-container rounded-xl p-6 relative overflow-hidden group">
+<div class="flex flex-col h-full justify-between relative z-10">
+<div>
+<span class="inline-block px-3 py-1 rounded-full border border-primary/20 text-xs font-label-md text-primary mb-4">MOOD: 🌸 SWEET</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">Our Growth</h3>
+<p class="text-on-surface-variant text-sm">Every promise here is a stepping stone toward a better version of us. I'm learning every day.</p>
+</div>
+<div class="mt-6 flex gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="w-2 h-2 rounded-full bg-primary/40"></span>
+<span class="w-2 h-2 rounded-full bg-primary/20"></span>
+</div>
+</div>
+<img alt="Dried flowers on a desk" class="absolute top-0 right-0 w-1/2 h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity" data-alt="A soft focus, high-key photograph of delicate dried lavender and small pink blossoms scattered across a minimalist cream-colored workspace. The lighting is warm and natural, creating long soft shadows that evoke a peaceful, romantic morning. The overall aesthetic is whimsical and tactile, matching a gentle handwritten apology theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD85BpfKknEj4x-Jpx4-RTRrrz7YmxD-QMk5Q2vRI5qYy1_OOmz1IojJGDPfEgZKtCLKZNJWZ7em7t9IpyCMCEqhc7tpHZ_u6-RqvpZGbJl9O18zdap7q2jnnVlPVWWQicrwx4wjbhXF1l3iPG9lkcoh2y_dMpaj9cOsDsu7CWAJaZyf-RTYCI9_xudiJV5widjchDYe15mLbFZGactl_sLfiDEcMrqIvIf3x87QCiGPRFB6d-x6t2hSeMCf-tDGSWFRkfhaSWT9pk"/>
+</div>
+<div class="bg-primary text-on-primary rounded-xl p-6 flex flex-col items-center justify-center text-center space-y-4">
+<div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-3xl" data-icon="volunteer_activism" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+</div>
+<p class="font-display-handwritten text-xl italic">"Love is a quiet promise."</p>
+</div>
+</div>
+<!-- Action Button -->
+<div class="flex justify-center">
+<button class="bg-primary text-white font-label-md px-10 py-4 rounded-full shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1 active:scale-95 flex items-center gap-2 group">
+                Save My Promises
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] z-50 bg-surface-container rounded-t-xl shadow-[0_-4px_12px_rgba(134,78,90,0.1)] border-t border-outline-variant/20 flex justify-around items-center px-4 pb-6 pt-2">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-label-md font-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="text-label-md font-label-md">Reasons</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 scale-110" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="text-label-md font-label-md">Promises</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_heart">calendar_meal</span>
+<span class="text-label-md font-label-md">Date</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="flex flex-col items-center justify-center gap-base w-full pb-32 py-section-margin bg-transparent">
+<span class="font-display-handwritten text-display-handwritten text-primary">Heartfelt</span>
+<div class="flex gap-4">
+<a class="text-on-surface-variant opacity-60 text-label-md hover:text-primary transition-colors" href="#">Our Story</a>
+<a class="text-on-surface-variant opacity-60 text-label-md hover:text-primary transition-colors" href="#">Contact Me</a>
+</div>
+<p class="text-on-surface-variant text-label-md">Made with all my love and a million apologies</p>
+</footer>
+<script>
+        // Simple Signature Pad Implementation
+        const canvas = document.getElementById('signature-pad');
+        const ctx = canvas.getContext('2d');
+        const clearBtn = document.getElementById('clear-signature');
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
+
+        ctx.strokeStyle = '#864e5a';
+        ctx.lineJoin = 'round';
+        ctx.lineCap = 'round';
+        ctx.lineWidth = 2;
+
+        function draw(e) {
+            if (!isDrawing) return;
+            
+            const rect = canvas.getBoundingClientRect();
+            const x = (e.clientX || e.touches[0].clientX) - rect.left;
+            const y = (e.clientY || e.touches[0].clientY) - rect.top;
+
+            ctx.beginPath();
+            ctx.moveTo(lastX, lastY);
+            ctx.lineTo(x, y);
+            ctx.stroke();
+            [lastX, lastY] = [x, y];
+        }
+
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            const rect = canvas.getBoundingClientRect();
+            [lastX, lastY] = [e.clientX - rect.left, e.clientY - rect.top];
+        });
+
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', () => isDrawing = false);
+        canvas.addEventListener('mouseout', () => isDrawing = false);
+
+        canvas.addEventListener('touchstart', (e) => {
+            isDrawing = true;
+            const rect = canvas.getBoundingClientRect();
+            [lastX, lastY] = [e.touches[0].clientX - rect.left, e.touches[0].clientY - rect.top];
+            e.preventDefault();
+        });
+        canvas.addEventListener('touchmove', (e) => {
+            draw(e);
+            e.preventDefault();
+        });
+        canvas.addEventListener('touchend', () => isDrawing = false);
+
+        clearBtn.addEventListener('click', () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        });
+
+        // Atmospheric Micro-interactions
+        document.querySelectorAll('.scribble-hover').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const colors = ['#864e5a', '#b12a2e', '#6b3743'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                item.querySelector('span:last-child').style.color = randomColor;
+            });
+            item.addEventListener('mouseleave', () => {
+                item.querySelector('span:last-child').style.color = '';
+            });
+        });
+    </script>
+</body></html>

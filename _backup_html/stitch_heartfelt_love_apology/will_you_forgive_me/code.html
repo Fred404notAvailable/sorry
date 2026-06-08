@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heartfelt - Will You Forgive Me?</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary": "#864e5a",
+                "on-background": "#251818",
+                "surface-container-highest": "#f5dddc",
+                "surface-dim": "#edd4d4",
+                "on-primary-fixed": "#360c19",
+                "inverse-surface": "#3c2d2d",
+                "outline": "#837375",
+                "surface-container": "#ffe9e8",
+                "tertiary-fixed": "#ffdad7",
+                "on-tertiary-fixed": "#410005",
+                "on-secondary": "#ffffff",
+                "inverse-on-surface": "#ffedec",
+                "surface-bright": "#fff8f7",
+                "surface-container-high": "#fbe2e2",
+                "secondary-container": "#e4e3db",
+                "on-surface": "#251818",
+                "inverse-primary": "#fbb3c1",
+                "on-error": "#ffffff",
+                "on-secondary-fixed": "#1b1c17",
+                "on-error-container": "#93000a",
+                "surface-variant": "#f5dddc",
+                "tertiary-fixed-dim": "#ffb3ae",
+                "secondary-fixed-dim": "#c8c7bf",
+                "tertiary": "#b12a2e",
+                "secondary-fixed": "#e4e3db",
+                "on-secondary-fixed-variant": "#474742",
+                "surface": "#fff8f7",
+                "surface-tint": "#864e5a",
+                "error": "#ba1a1a",
+                "secondary": "#5f5f59",
+                "on-surface-variant": "#514345",
+                "tertiary-container": "#ffb9b4",
+                "on-tertiary-fixed-variant": "#8f0d19",
+                "primary-container": "#ffb7c5",
+                "surface-container-lowest": "#ffffff",
+                "on-primary": "#ffffff",
+                "primary-fixed-dim": "#fbb3c1",
+                "on-tertiary": "#ffffff",
+                "primary-fixed": "#ffd9df",
+                "error-container": "#ffdad6",
+                "on-secondary-container": "#65655f",
+                "on-tertiary-container": "#a42026",
+                "on-primary-fixed-variant": "#6b3743",
+                "on-primary-container": "#7b4551",
+                "outline-variant": "#d6c2c4",
+                "surface-container-low": "#fff0f0",
+                "background": "#fff8f7"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "element-gap": "16px",
+                "container-padding": "24px",
+                "base": "8px",
+                "section-margin": "64px"
+            },
+            "fontFamily": {
+                "headline-xl": ["Playfair Display"],
+                "display-handwritten": ["Playfair Display"],
+                "body-md": ["Plus Jakarta Sans"],
+                "label-md": ["Plus Jakarta Sans"],
+                "headline-lg": ["Playfair Display"],
+                "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "display-handwritten": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-grainy {
+            background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+            background-repeat: repeat;
+        }
+        .squish-hover:active {
+            transform: scale(0.92);
+        }
+        .scalloped-border {
+            mask-image: radial-gradient(circle at 10px 10px, transparent 10px, black 11px);
+            mask-size: 20px 20px;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .confetti {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm shadow-primary/10 px-container-padding py-base">
+<nav class="flex justify-between items-center max-w-[800px] mx-auto w-full">
+<span class="font-display-handwritten text-display-handwritten text-primary">Heartfelt</span>
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity">favorite</button>
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity">menu</button>
+</div>
+</nav>
+</header>
+<main class="min-h-screen pt-32 pb-32 flex flex-col items-center justify-center px-container-padding relative bg-grainy">
+<!-- Background Soft Gradient Glows -->
+<div class="absolute inset-0 -z-10 overflow-hidden">
+<div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary-container/30 blur-[100px] rounded-full"></div>
+<div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-surface-container-highest/40 blur-[120px] rounded-full"></div>
+</div>
+<!-- Character Illustration Container -->
+<div class="w-full max-w-[400px] aspect-square relative mb-element-gap animate-float">
+<div class="absolute inset-0 bg-secondary-container/20 rounded-full blur-3xl"></div>
+<img alt="Sad puppy looking up with big eyes" class="w-full h-full object-cover rounded-[40px] shadow-sm shadow-primary/10 border-4 border-surface" data-alt="A soft-focus, high-key digital painting of a tiny, fluffy puppy with enormous, glistening brown eyes looking upwards with a vulnerable, sincere expression. The lighting is warm and diffused, creating a dreamy and sentimental atmosphere. The background consists of soft pastel pinks and creams, mirroring a gentle light-mode UI aesthetic. The overall mood is deeply heartwarming and slightly melancholy, designed to evoke immediate empathy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-j3AIa700lkx_zHDTPoaTA5X-ijUHNWDtyNFJ3AYauxMxxHVLF4DZ8bJPCHAmao4wlHyNQBywUHqxeRFTmn7L-CoT47f6zlLobJ10XyM-vHo_xIZXHNBCFkeLec5LDvjTeerLnDOXQMaWvPFCD53HC7E_GxI2zj6AG2pfmsb3hRIZ0zjZ1iRh7u_rYDcPd8AaHJcWRs1titq9OW-rnghI5nKd1ZZJAecniXjixKGCb1ZDGd53eqywIXbT2Zg6GX-rQO0xiXmSHjw"/>
+<!-- Hand-drawn Doodle Overlays -->
+<div class="absolute -top-4 -right-4 text-primary opacity-40">
+<span class="material-symbols-outlined text-4xl">spark</span>
+</div>
+<div class="absolute -bottom-2 -left-4 text-primary opacity-40">
+<span class="material-symbols-outlined text-4xl rotate-12">favorite</span>
+</div>
+</div>
+<!-- Text Content -->
+<div class="text-center max-w-[600px] z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high border border-dashed border-outline-variant rounded-full mb-base">
+<span class="text-[14px]">🥺</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Sincere Request</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-base">Will you forgive me?</h1>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80 leading-relaxed mb-section-margin">
+                I know I messed up, and my heart feels a little heavy. I truly value us more than anything else. Can we start over?
+            </p>
+</div>
+<!-- Interaction Area -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full max-w-[480px]" id="action-container">
+<!-- NO Button (Soft Grey) -->
+<button class="order-2 sm:order-1 px-10 py-4 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md shadow-sm transition-all duration-300 hover:bg-outline-variant hover:translate-y-1 active:scale-95" id="btn-no">
+                No
+            </button>
+<!-- YES Button (Vibrant Pink & Grows) -->
+<button class="order-1 sm:order-2 px-12 py-5 rounded-full bg-primary text-white font-label-md text-headline-lg-mobile shadow-[0_8px_20px_rgba(134,78,90,0.3)] transition-all duration-500 hover:scale-110 active:scale-90 hover:bg-primary/90 flex items-center gap-2" id="btn-yes">
+                Yes
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- "The Stamp" - Wax Seal Motif (Initially Hidden) -->
+<div class="hidden fixed inset-0 z-[60] flex items-center justify-center bg-surface/60 backdrop-blur-sm" id="success-seal">
+<div class="relative transform scale-0 transition-transform duration-700 ease-out" id="seal-inner">
+<div class="w-48 h-48 bg-primary rounded-full flex flex-col items-center justify-center text-white shadow-2xl relative">
+<!-- Scalloped Edge Effect -->
+<div class="absolute inset-0 rounded-full border-4 border-dashed border-white/30 animate-[spin_20s_linear_infinite]"></div>
+<span class="material-symbols-outlined text-6xl mb-2" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-display-handwritten text-2xl">Thank You</span>
+<p class="text-[10px] uppercase tracking-widest mt-1 opacity-70">Forever Yours</p>
+</div>
+<button class="absolute -bottom-16 left-1/2 -translate-x-1/2 font-label-md text-primary underline underline-offset-4" onclick="resetState()">Reset</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col items-center justify-center gap-base w-full pb-32 pt-section-margin">
+<p class="font-label-md text-label-md text-on-surface-variant opacity-60">Made with all my love and a million apologies</p>
+<div class="flex gap-4">
+<a class="font-label-md text-label-md text-on-surface-variant opacity-60 hover:text-primary transition-colors" href="#">Our Story</a>
+<a class="font-label-md text-label-md text-on-surface-variant opacity-60 hover:text-primary transition-colors" href="#">Contact Me</a>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 max-w-[800px] mx-auto left-1/2 -translate-x-1/2 bg-surface-container rounded-t-xl shadow-[0_-4px_12px_rgba(134,78,90,0.1)] border-t border-outline-variant/20">
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-[10px]">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label-md text-[10px]">Reasons</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-md text-[10px]">Promises</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_meal</span>
+<span class="font-label-md text-[10px]">Date</span>
+</div>
+</nav>
+<script>
+        const btnNo = document.getElementById('btn-no');
+        const btnYes = document.getElementById('btn-yes');
+        const seal = document.getElementById('success-seal');
+        const sealInner = document.getElementById('seal-inner');
+        
+        let yesScale = 1;
+        let noScale = 1;
+
+        btnNo.addEventListener('click', () => {
+            // "No" makes the "Yes" button grow more aggressively
+            yesScale += 0.4;
+            noScale -= 0.1;
+            
+            btnYes.style.transform = `scale(${yesScale})`;
+            btnNo.style.transform = `scale(${noScale > 0.2 ? noScale : 0.2})`;
+            
+            // Move No button randomly to make it harder to click
+            const x = Math.random() * 40 - 20;
+            const y = Math.random() * 40 - 20;
+            btnNo.style.transform += ` translate(${x}px, ${y}px)`;
+
+            // Sincere prompt update or visual feedback
+            const phrases = ["Are you sure?", "Really?", "Think again...", "Pretty please?", "I'll be good!", "Don't be mean!", "Pout..."];
+            btnNo.innerText = phrases[Math.floor(Math.random() * phrases.length)];
+        });
+
+        btnYes.addEventListener('click', () => {
+            seal.classList.remove('hidden');
+            setTimeout(() => {
+                sealInner.style.transform = 'scale(1)';
+                createConfetti();
+            }, 50);
+        });
+
+        function resetState() {
+            sealInner.style.transform = 'scale(0)';
+            setTimeout(() => {
+                seal.classList.add('hidden');
+                yesScale = 1;
+                noScale = 1;
+                btnYes.style.transform = `scale(1)`;
+                btnNo.style.transform = `scale(1)`;
+                btnNo.innerText = "No";
+            }, 500);
+        }
+
+        function createConfetti() {
+            for (let i = 0; i < 50; i++) {
+                const conf = document.createElement('div');
+                conf.classList.add('confetti');
+                conf.style.left = '50%';
+                conf.style.top = '50%';
+                conf.style.backgroundColor = ['#ffb7c5', '#864e5a', '#fbb3c1', '#ffd9df'][Math.floor(Math.random() * 4)];
+                conf.style.borderRadius = '50%';
+                document.body.appendChild(conf);
+
+                const angle = Math.random() * Math.PI * 2;
+                const velocity = 5 + Math.random() * 15;
+                const vx = Math.cos(angle) * velocity;
+                const vy = Math.sin(angle) * velocity;
+                
+                let posX = window.innerWidth / 2;
+                let posY = window.innerHeight / 2;
+                let opacity = 1;
+
+                const animate = () => {
+                    posX += vx;
+                    posY += vy + 0.5; // gravity
+                    opacity -= 0.01;
+                    conf.style.left = posX + 'px';
+                    conf.style.top = posY + 'px';
+                    conf.style.opacity = opacity;
+
+                    if (opacity > 0) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        conf.remove();
+                    }
+                };
+                requestAnimationFrame(animate);
+            }
+        }
+    </script>
+</body></html>
