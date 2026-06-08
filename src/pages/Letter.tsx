@@ -80,7 +80,7 @@ export default function Letter() {
       audioRef.current.pause();
       setIsPlaying(false);
     } else {
-      audioRef.current.play().catch(e => console.log('Audio requires interaction'));
+      audioRef.current.play().catch(() => console.log('Audio requires interaction'));
       setIsPlaying(true);
     }
   };
