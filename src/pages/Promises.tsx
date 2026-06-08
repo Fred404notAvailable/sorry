@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -7,7 +7,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Promises() {
   const container = useRef<HTMLDivElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -69,88 +68,6 @@ export default function Promises() {
 
   }, { scope: container });
 
-  // Signature Pad Logic
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    let isDrawing = false;
-    let lastX = 0;
-    let lastY = 0;
-
-    ctx.strokeStyle = '#864e5a';
-    ctx.lineJoin = 'round';
-    ctx.lineCap = 'round';
-    ctx.lineWidth = 2;
-
-    const draw = (e: MouseEvent | TouchEvent) => {
-      if (!isDrawing) return;
-
-      const rect = canvas.getBoundingClientRect();
-      let clientX, clientY;
-
-      if (e instanceof MouseEvent) {
-        clientX = e.clientX;
-        clientY = e.clientY;
-      } else {
-        clientX = e.touches[0].clientX;
-        clientY = e.touches[0].clientY;
-      }
-
-      const x = clientX - rect.left;
-      const y = clientY - rect.top;
-
-      ctx.beginPath();
-      ctx.moveTo(lastX, lastY);
-      ctx.lineTo(x, y);
-      ctx.stroke();
-      [lastX, lastY] = [x, y];
-    };
-
-    const startDrawing = (e: MouseEvent | TouchEvent) => {
-      isDrawing = true;
-      const rect = canvas.getBoundingClientRect();
-      if (e instanceof MouseEvent) {
-        [lastX, lastY] = [e.clientX - rect.left, e.clientY - rect.top];
-      } else {
-        [lastX, lastY] = [e.touches[0].clientX - rect.left, e.touches[0].clientY - rect.top];
-        e.preventDefault();
-      }
-    };
-
-    const stopDrawing = () => { isDrawing = false; };
-
-    canvas.addEventListener('mousedown', startDrawing);
-    canvas.addEventListener('mousemove', draw);
-    canvas.addEventListener('mouseup', stopDrawing);
-    canvas.addEventListener('mouseout', stopDrawing);
-
-    canvas.addEventListener('touchstart', startDrawing, { passive: false });
-    canvas.addEventListener('touchmove', draw, { passive: false });
-    canvas.addEventListener('touchend', stopDrawing);
-
-    return () => {
-      canvas.removeEventListener('mousedown', startDrawing);
-      canvas.removeEventListener('mousemove', draw);
-      canvas.removeEventListener('mouseup', stopDrawing);
-      canvas.removeEventListener('mouseout', stopDrawing);
-      canvas.removeEventListener('touchstart', startDrawing);
-      canvas.removeEventListener('touchmove', draw);
-      canvas.removeEventListener('touchend', stopDrawing);
-    };
-  }, []);
-
-  const clearSignature = () => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-  };
-
   return (
     <div ref={container} className="pb-section-margin">
       {/* Hero Section / Context */}
@@ -194,25 +111,12 @@ export default function Promises() {
               </li>
             </ul>
 
-            <div className="mt-16 text-right pr-4">
-              <p className="font-[Dancing Script] text-2xl text-primary mb-2 opacity-80">With all my love,</p>
-              {/* Digital Signature Area */}
-              <div className="inline-block relative">
-                <canvas
-                  ref={canvasRef}
-                  className="signature-pad border-b-2 border-dashed border-primary/30 w-64 h-32 relative z-10"
-                  height="128"
-                  width="256"
-                ></canvas>
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20 select-none z-0">
-                  <span className="font-[Dancing Script] text-lg">Sign here...</span>
-                </div>
-                <button
-                  onClick={clearSignature}
-                  className="absolute -right-8 bottom-2 material-symbols-outlined text-on-surface-variant/40 hover:text-primary transition-colors text-sm z-20"
-                >
-                  refresh
-                </button>
+            <div className="mt-16 text-right pr-12">
+              <p className="font-[Dancing Script] text-2xl text-on-surface-variant mb-2">With all my love,</p>
+              {/* Permanent Signature Area */}
+              <div className="inline-block relative mt-4 transform -rotate-3">
+                <span className="font-[Dancing Script] text-6xl text-primary">Pravy</span>
+                <div className="w-full h-[2px] bg-primary/20 rounded mt-2"></div>
               </div>
             </div>
           </div>
