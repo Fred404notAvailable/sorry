@@ -161,13 +161,7 @@ export default function Promises() {
         </div>
       </div>
 
-      {/* Action Button */}
-      <div className="flex justify-center insight-card">
-        <button className="bg-primary text-white font-label-md px-10 py-4 rounded-full shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1 active:scale-95 flex items-center gap-2 group">
-          Save My Promises
-          <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-        </button>
-      </div>
+
     </div>
   );
 }
