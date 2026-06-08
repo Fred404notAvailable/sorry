@@ -111,12 +111,16 @@ export default function Promises() {
               </li>
             </ul>
 
-            <div className="mt-16 text-right pr-12">
-              <p className="font-[Dancing Script] text-2xl text-on-surface-variant mb-2">With all my love,</p>
-              {/* Permanent Signature Area */}
-              <div className="inline-block relative mt-4 transform -rotate-3">
-                <span className="font-[Dancing Script] text-6xl text-primary">Pravy</span>
-                <div className="w-full h-[2px] bg-primary/20 rounded mt-2"></div>
+            <div className="mt-16 text-right pr-4">
+              <p className="font-[Dancing Script] text-2xl text-primary mb-2 opacity-80">With all my love,</p>
+              {/* Permanent Hand-drawn Signature Area */}
+              <div className="inline-block relative">
+                <img 
+                  src="/images/my-signature.png" 
+                  alt="My Signature" 
+                  className="w-48 h-auto object-contain transform -rotate-3"
+                />
+                <div className="w-full h-[2px] bg-primary/20 rounded mt-1"></div>
               </div>
             </div>
           </div>
