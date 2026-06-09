@@ -188,7 +188,7 @@ export default function Journey() {
                 <div className="absolute -top-4 -right-4 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-10 md:hidden">
                   <span className="material-symbols-outlined">park</span>
                 </div>
-                <span className="inline-block px-3 py-1 bg-white/60 backdrop-blur-sm text-primary rounded-full text-label-md font-label-md mb-4 border border-dashed border-white/60">Jan 1, 2026</span>
+                <span className="inline-block px-3 py-1 bg-white/60 backdrop-blur-sm text-primary rounded-full text-label-md font-label-md mb-4 border border-dashed border-white/60">Jan 11, 2026</span>
                 <h3 className="font-headline-lg text-headline-lg text-on-surface mb-3">First meet</h3>
                 <p className="text-on-surface-variant">The day i came to my home for the first time. Easily the best day in my whole life and always will be </p>
               </div>
